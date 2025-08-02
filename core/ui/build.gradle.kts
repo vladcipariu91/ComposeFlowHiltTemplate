@@ -1,22 +1,17 @@
 plugins {
-    alias(libs.plugins.android.application)
+    alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.google.hilt)
     alias(libs.plugins.ksp)
-    alias(libs.plugins.kotlin.serialization)
 }
 
 android {
-    namespace = "com.example.apptemplate"
+    namespace = "com.example.core.ui"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.example.apptemplate"
         minSdk = 24
-        targetSdk = 36
-        versionCode = 1
-        versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -40,19 +35,9 @@ android {
     buildFeatures {
         compose = true
     }
-    hilt {
-        enableAggregatingTask = true
-    }
 }
 
 dependencies {
-
-    implementation(project(":core:network"))
-    implementation(project(":core:ui"))
-    implementation(project(":feature:character_list"))
-    implementation(project(":feature:character_list:domain"))
-    implementation(project(":feature:character_list:data"))
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.lifecycle.viewmodel.compose)
