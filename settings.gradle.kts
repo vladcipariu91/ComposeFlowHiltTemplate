@@ -21,3 +21,6 @@ dependencyResolutionManagement {
 
 rootProject.name = "AppTemplate"
 include(":app")
+include(":feature:character-list")
+include(":feature:character-list:data")
+include(":feature:character-list:domain")
