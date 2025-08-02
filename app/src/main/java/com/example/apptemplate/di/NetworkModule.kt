@@ -1,4 +1,4 @@
-package com.example.apptemplate
+package com.example.apptemplate.di
 
 import com.example.feature.character_list.data.CharacterRepositoryImpl
 import com.example.feature.character_list.data.network.CharacterApiService
@@ -34,17 +34,5 @@ object NetworkModule {
     }
 
     @Provides
-    fun providesCharacterApiService(retrofit: Retrofit): CharacterApiService =
-        retrofit.create(CharacterApiService::class.java)
-
-    @Provides
     fun providesIoDispatcher(): CoroutineDispatcher = Dispatchers.IO
-}
-
-@Module
-@InstallIn(SingletonComponent::class)
-abstract class RepositoryModule {
-
-    @Binds
-    abstract fun bindCharactersRepository(repository: CharacterRepositoryImpl) : CharacterRepository
 }

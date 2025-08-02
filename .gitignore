@@ -13,3 +13,11 @@
 .externalNativeBuild
 .cxx
 local.properties
+# Ignore all build output
+**/build/
+
+# Ignore all KSP-generated files
+**/build/generated/ksp/
+
+# Ignore all Hilt aggregated deps (commonly appear here)
+**/hilt_aggregated_deps/

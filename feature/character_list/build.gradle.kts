@@ -59,6 +59,8 @@ dependencies {
     implementation(libs.androidx.navigation)
     implementation(libs.square.retrofit)
     implementation(libs.square.retrofit.kotlinx.serialization)
+    implementation(libs.coil.compose)
+    implementation(libs.coil.network)
     ksp(libs.hilt.compiler)
 
     testImplementation(libs.junit)
