@@ -7,7 +7,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.feature.character_list"
+    namespace = "com.example.feature.template"
     compileSdk = 36
 
     defaultConfig {
@@ -40,7 +40,7 @@ android {
 dependencies {
     implementation(project(":core:ui"))
     implementation(project(":core:network"))
-    implementation(project(":feature:character_list:domain"))
+    implementation(project(":feature:template:domain"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)

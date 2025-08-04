@@ -53,6 +53,10 @@ dependencies {
     implementation(project(":feature:character_list:domain"))
     implementation(project(":feature:character_list:data"))
 
+    implementation(project(":feature:template"))
+    implementation(project(":feature:template:domain"))
+    implementation(project(":feature:template:data"))
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.lifecycle.viewmodel.compose)

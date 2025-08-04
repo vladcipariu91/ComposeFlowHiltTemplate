@@ -26,3 +26,7 @@ include(":core:ui")
 include(":feature:character_list")
 include(":feature:character_list:data")
 include(":feature:character_list:domain")
+
+include(":feature:template")
+include(":feature:template:domain")
+include(":feature:template:data")
