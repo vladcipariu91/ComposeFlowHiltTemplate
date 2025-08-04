@@ -3,6 +3,7 @@ package com.example.apptemplate.di
 import com.example.feature.character_list.data.CharacterRepositoryImpl
 import com.example.feature.character_list.data.network.CharacterApiService
 import com.example.feature.character_list.domain.CharacterRepository
+import com.example.feature.template.data.DeliveryApiService
 import dagger.Binds
 import dagger.Module
 import dagger.Provides
@@ -28,11 +29,15 @@ object NetworkModule {
         }
 
         return Retrofit.Builder()
-            .baseUrl("https://rickandmortyapi.com/api/")
+            .baseUrl("https://relay-production.relaytechapis.co/")
             .addConverterFactory(json.asConverterFactory(contentType = "application/json".toMediaType()))
             .build()
     }
 
     @Provides
     fun providesIoDispatcher(): CoroutineDispatcher = Dispatchers.IO
+
+    @Provides
+    fun providesDeliveryApiService(retrofit: Retrofit): DeliveryApiService =
+        retrofit.create(DeliveryApiService::class.java)
 }

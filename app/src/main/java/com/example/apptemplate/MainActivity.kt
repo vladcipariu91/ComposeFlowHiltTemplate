@@ -15,6 +15,7 @@ import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.ui.Modifier
 import com.example.core.ui.theme.AppTemplateTheme
 import com.example.feature.character_list.CharacterListScreen
+import com.example.feature.template.DeliveriesScreen
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -41,7 +42,7 @@ class MainActivity : ComponentActivity() {
                         )
                     }
                 ) { innerPadding ->
-                    CharacterListScreen(
+                    DeliveriesScreen(
                         modifier = Modifier.padding(
                             top = innerPadding.calculateTopPadding(),
                             bottom = innerPadding.calculateBottomPadding()
